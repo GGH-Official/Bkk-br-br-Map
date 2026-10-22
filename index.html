@@ -490,209 +490,6 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/dark_nolabels/{z}/{x}
             }
         });
 
-         // ==========================================================================
-        // MINOR ROAD: Sukhumvit Soi 37
-        // ==========================================================================
-        const SukhumvitSoi37Path = [
-            [13.730090, 100.570225], // Left number less is longer South and right number less is longer West // 
-            [13.730656, 100.570365],
-        ];
-
-        const SukhumvitSoi37 = L.polyline(SukhumvitSoi37Path, {
-            color: '#aaaaaa',
-            weight: 4,
-            opacity: 0.75,
-            lineCap: 'round',
-            lineJoin: 'round',
-            interactive: false
-        }).addTo(map);
-
-        SukhumvitSoi37.setText("Sukhumvit Soi 37", {
-            center: true,
-            offset: -6,
-            attributes: {
-                'fill': '#ffffff',
-                'font-weight': '500',
-                'font-size': '10px',
-                'font-family': 'Helvetica Neue, Arial, sans-serif',
-                'letter-spacing': '0.5px'
-            }
-        });
-        
-        // ==========================================================================
-        // MINOR ROAD: SOI 22
-        // ==========================================================================
-        const soi22Path = [
-            [13.733623, 100.565175],
-            [13.732573, 100.565129],
-            [13.731995, 100.565099],
-            [13.730703, 100.565123],
-            [13.726235, 100.565113],
-            [13.724860, 100.564873],  
-            [13.723766, 100.564787]  
-        ];
-
-        const lineSoi22 = L.polyline(soi22Path, {
-            color: '#aaaaaa',
-            weight: 4,
-            opacity: 0.75,
-            lineCap: 'round',
-            lineJoin: 'round',
-            interactive: false
-        }).addTo(map);
-
-        lineSoi22.setText("Sukhumvit Soi 22", {
-            center: true,
-            offset: -6,
-            attributes: {
-                'fill': '#ffffff',
-                'font-weight': '500',
-                'font-size': '10px',
-                'font-family': 'Helvetica Neue, Arial, sans-serif',
-                'letter-spacing': '0.5px'
-            }
-        });
-
-        // ==========================================================================
-        // MINOR ROAD 1: SOI 23 (Text on middle portion only)
-        // ==========================================================================
-        const soi23Path = [
-            [13.735498, 100.562582],
-            [13.738379, 100.563009],
-            [13.738116, 100.565198],
-            [13.740185, 100.565636] 
-        ];
-
-        const lineSoi23 = L.polyline(soi23Path, {
-            color: '#aaaaaa',
-            weight: 4,
-            opacity: 0.75,
-            lineCap: 'round',
-            lineJoin: 'round',
-            interactive: false
-        }).addTo(map);
-
-        const textPathSoi23 = L.polyline([soi23Path[1], soi23Path[2]], {
-            opacity: 0
-        }).addTo(map);
-
-        textPathSoi23.setText("Prasan Mit Alley", {
-            center: true,
-            offset: -6,
-            attributes: {
-                'fill': '#ffffff',
-                'font-weight': '500',
-                'font-size': '10px',
-                'font-family': 'Helvetica Neue, Arial, sans-serif',
-                'letter-spacing': '0.5px'
-            }
-        });
-
-        // ==========================================================================
-        // MINOR ROAD 1: SOI 31 (Text on middle portion only)
-        // ==========================================================================
-        const soi31Path = [
-            [13.733045, 100.566015],
-            [13.733139, 100.566065],
-            [13.736677, 100.566854],
-            [13.737693, 100.566994],
-            [13.737805, 100.566366], 
-            [13.738185, 100.566441] 
-        ];
-
-        const lineSoi31 = L.polyline(soi31Path, {
-            color: '#aaaaaa',
-            weight: 4,
-            opacity: 0.75,
-            lineCap: 'round',
-            lineJoin: 'round',
-            interactive: false
-        }).addTo(map);
-
-        const textPathSoi31 = L.polyline([soi31Path[1], soi31Path[2]], {
-            opacity: 0
-        }).addTo(map);
-
-        textPathSoi31.setText("Sukhumvit Soi 31", {
-            center: true,
-            offset: -6,
-            attributes: {
-                'fill': '#ffffff',
-                'font-weight': '500',
-                'font-size': '10px',
-                'font-family': 'Helvetica Neue, Arial, sans-serif',
-                'letter-spacing': '0.5px'
-            }
-        });
-
-        // ==========================================================================
-        // MINOR ROAD 2: SOI 33
-        // ==========================================================================
-        const soi33Path = [
-             [13.732344, 100.567046],
-             [13.732463, 100.567125],
-             [13.735301, 100.567730]
-        ];
-
-        const lineSoi33 = L.polyline(soi33Path, {
-            color: '#aaaaaa',
-            weight: 4,
-            opacity: 0.75,
-            lineCap: 'round',
-            lineJoin: 'round',
-            interactive: false
-        }).addTo(map);
-
-        lineSoi33.setText("Sukhumvit Soi 33", {
-            center: true,
-            offset: -6,
-            attributes: {
-                'fill': '#ffffff',
-                'font-weight': '500',
-                'font-size': '10px',
-                'font-family': 'Helvetica Neue, Arial, sans-serif',
-                'letter-spacing': '0.5px'
-            }
-        });
-
-        // ==========================================================================
-        // SMALL ACCESS ROADS
-        // ==========================================================================
-        const minorAccessRoads = [
-            {
-                name: "Path to A5 Massage",
-                path: [[13.729877, 100.565120], [13.729879, 100.565360]],
-                color: "#ff33aa", 
-                weight: 3,
-                dashArray: '5, 5'
-            },
-            {
-                name: "Path to Hakumi",
-                path: [[13.733181, 100.567313], [13.733000, 100.568114]],
-                color: "#ff33aa", 
-                weight: 3,
-                dashArray: '5, 5'
-            },
-            {
-                name: "Path to Anela",
-                path: [[13.732770, 100.565136], [13.732774, 100.564840]],
-                color: "#ff33aa", 
-                weight: 3,
-                dashArray: '5, 5'
-            }
-        ];
-
-        minorAccessRoads.forEach(road => {
-            L.polyline(road.path, {
-                color: road.color,
-                weight: road.weight,
-                opacity: 0.9,
-                dashArray: road.dashArray,
-                lineCap: 'round',
-                interactive: false
-            }).addTo(map);
-        });
-
         // ==========================================================================
         // MARKER DEFINITIONS & LOCATIONS
         // ==========================================================================
@@ -727,16 +524,17 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/dark_nolabels/{z}/{x}
                 htmlContent: `
                     <iframe 
                         style="width: 100%; aspect-ratio: 16 / 9; border: none;"
-                        src="https://rumble.com/embed/v7an41y/?pub=1g96ic" 
+                        src="https://www.youtube.com/shorts/TtZYaR0aIpk" 
                         title="YouTube video player" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         allowfullscreen>
                     </iframe>
-                    <h3 style="color:#ffffff; margin-top:10px; margin-bottom: 5px;">KoKoRo Massage Bangkok</h3>
-                    <p style="color:#ffffff; font-size:1.00em; margin-bottom: 20px;">Cosplay, BDSM and themed room nuru massage</p>
+                    <h3 style="color:#ffffff; margin-top:10px; margin-bottom: 5px;">Fortune tap Craft beer & Restaurant</h3>
+                    <p style="color:#ffffff; font-size:1.00em; margin-bottom: 20px;">Craft & Draft Beer, Live Music & Food</p>
 
                     <h3 style="color: #ffffff; margin-bottom: 5px;">Overview</h3>
-                    <span class="hopping-news-small" style="color: #ffffff; margin-bottom: 20px; display: block;">With a focus on fun and cosplay fantasy sessions, KoKoRo Massage delivers unforgettable experiences not found at most other Bangkok massage parlors. At Kokoro guests are able to live out their deepest life-long fantasies.</span>
+                    <span class="hopping-news-small" style="color: #ffffff; margin-bottom: 20px; display: block;">Choop maak maak. Great place for everything. Hungry? Eat Mukata (thai bbq) good price good quality. Thirsty? Enjoy hughe varity of local and international beers! Ure not sure which one? Feel free to ask and try them first! Live music, pool table... and most importantly lovely service minded staff!
+Highly recommented!</span>
 
                     <div style="margin-top: 30px; border-top: 1px solid #333; margin-bottom: 30px;"></div>
 
